@@ -14,6 +14,7 @@ include('../models/db.php');
 $step = 'Add or modify a project';
 
 
+// These functions are all for displaying the page...not writing...
 function projectList() {
     
     $sql = 'SELECT * FROM project_nfo ORDER BY PID DESC';
@@ -151,114 +152,114 @@ function getImages() {
     <script src="/library/scripts/sweetalert/sweetalert.min.js"></script>
 
     <style>
-    html,body{color:#333;background:#fff;}
-    
-    input[type=text],
-    input[type="password"],
-    textarea    
-        {
-            width:98%;
-            padding:1%;
-            border:1px solid #919195;
-            border-radius:3px;
-            font-size:1em;
-            font-family:sans-serif;
-            color:#919195
-        }
+        html,body{color:#333;background:#fff;}
         
-    .projectCard{
-        display: block;
-        width: 48%;
-        background-size: cover !important;
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        min-height: 200px;
-        float: left;
-        list-style-type: none;
-        position: relative; 
-        margin: 1%;
-    }
-        .projectCard.newProject .projectCard_inner{
-            height: 196px;
-            border: 2px dashed #ccc;
-            background: #efefef !important;
-            padding: 0;
-        }
-            .projectCard.newProject .projectCard_title{
-                padding-top: 3em;
-                text-align: center;
-                color: #ccc;
-                padding-left: 0;
-                padding-right: 0;
+        input[type=text],
+        input[type="password"],
+        textarea    
+            {
+                width:98%;
+                padding:1%;
+                border:1px solid #919195;
+                border-radius:3px;
+                font-size:1em;
+                font-family:sans-serif;
+                color:#919195
             }
-        
-        .projectCard.featured .projectCard_inner{
-            background-color: rgba(97,165,192,0.9);
-        }
-        .projectCard_inner{
-            padding: 5px 2em 5px 10px;
-            background: rgba(65,75,78,0.9);
-
+            
+        .projectCard{
             display: block;
-            color: #fff !important;
-            text-decoration: none;
-            transition: all .2s ease;
+            width: 48%;
+            background-size: cover !important;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            min-height: 200px;
+            float: left;
+            list-style-type: none;
+            position: relative; 
+            margin: 1%;
         }
-            .projectCard_inner:hover{
-                text-decoration: none;
-                background: rgba(65,75,78,1);
+            .projectCard.newProject .projectCard_inner{
+                height: 196px;
+                border: 2px dashed #ccc;
+                background: #efefef !important;
+                padding: 0;
             }
-        .projectCard_title{
-            margin: 10px 0 0 0;
-        }
-        .projectCard_meta{
-            font-size: 0.75em;
-            opacity: 0.7;
-            line-height: 1;
-            margin-top: 0;
-        }
-            .projectCard_meta.featured{
-                opacity: 1;
-                margin: 0;
+                .projectCard.newProject .projectCard_title{
+                    padding-top: 3em;
+                    text-align: center;
+                    color: #ccc;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            
+            .projectCard.featured .projectCard_inner{
+                background-color: rgba(97,165,192,0.9);
             }
-        .projectCard_remove{
-            position: absolute;
-            display: block;
-            bottom: 0;
-            right: 0;
-            width: 2em;
-            height: 2em;
-            line-height: 2em !important;
-            text-align: center;
-            color: #fff;
-            background: rgba(65,75,78,0.9);
-            transition: all .2s ease;
-        }
-        .projectCard_remove:hover{
-            background: red;
-        }
-        .projectCard_featured{
-            position: absolute;
-            display: block;
-            top: 0;
-            right: 0;
-            width: 2em;
-            height: 2em;
-            line-height: 2em !important;
-            text-align: center;
-            background: rgba(65,75,78,0.9);
-            transition: all .2s ease;
-            color: rgba(255,255,255,0.5);
-        }
-            .projectCard_featured:hover,
-            .projectCard.featured .projectCard_featured{
-                background: rgba(97,165,192,0.7);
-            }
-            .projectCard.featured .projectCard_featured:hover{
+            .projectCard_inner{
+                padding: 5px 2em 5px 10px;
                 background: rgba(65,75,78,0.9);
-            }        
-        
-        .pb--20{padding-bottom: 20px;}
+
+                display: block;
+                color: #fff !important;
+                text-decoration: none;
+                transition: all .2s ease;
+            }
+                .projectCard_inner:hover{
+                    text-decoration: none;
+                    background: rgba(65,75,78,1);
+                }
+            .projectCard_title{
+                margin: 10px 0 0 0;
+            }
+            .projectCard_meta{
+                font-size: 0.75em;
+                opacity: 0.7;
+                line-height: 1;
+                margin-top: 0;
+            }
+                .projectCard_meta.featured{
+                    opacity: 1;
+                    margin: 0;
+                }
+            .projectCard_remove{
+                position: absolute;
+                display: block;
+                bottom: 0;
+                right: 0;
+                width: 2em;
+                height: 2em;
+                line-height: 2em !important;
+                text-align: center;
+                color: #fff;
+                background: rgba(65,75,78,0.9);
+                transition: all .2s ease;
+            }
+            .projectCard_remove:hover{
+                background: red;
+            }
+            .projectCard_featured{
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+                width: 2em;
+                height: 2em;
+                line-height: 2em !important;
+                text-align: center;
+                background: rgba(65,75,78,0.9);
+                transition: all .2s ease;
+                color: rgba(255,255,255,0.5);
+            }
+                .projectCard_featured:hover,
+                .projectCard.featured .projectCard_featured{
+                    background: rgba(97,165,192,0.7);
+                }
+                .projectCard.featured .projectCard_featured:hover{
+                    background: rgba(65,75,78,0.9);
+                }        
+            
+            .pb--20{padding-bottom: 20px;}
     </style>
 </head>
 <body>
