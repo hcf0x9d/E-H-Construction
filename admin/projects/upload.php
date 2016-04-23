@@ -8,11 +8,13 @@
     
     // // Handling the upload
     $path = $_SERVER['DOCUMENT_ROOT'];
+
     include($path.'/library/includes/config/simpleimage.inc.php');
-    
-     include($path.'/admin/models/project_functions.php');
-     include($path.'/admin/models/db.php');
-    
+    include($path.'/admin/models/models/db.php');   
+    include($path.'/admin/models/project_functions.php');
+
+   
+
     $ouptut_date = date('Y').'/'.date('m');
     $output_dir = "../../images/projects/".$ouptut_date."/";
     $output_480 = $output_dir."480/";

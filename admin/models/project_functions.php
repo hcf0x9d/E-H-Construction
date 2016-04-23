@@ -100,16 +100,18 @@ function addProject() {
     $result = $mysqli->query($sql);
     if ($result) {
         getProjectId($ProjName);
+        echo $sql . '<br>';
+        echo $result;
     }
 }
 
 function updateProject() {
     $PID = $_POST['pid'];
-    $ProjName = mysql_real_escape_string($_POST['title']);
+    $ProjName = $_POST['title'];
     $ProjLink = clean($ProjName);
-    $ProjVendors = mysql_real_escape_string($_POST['vendors']);
-    $ProjDescShort = mysql_real_escape_string($_POST['shortdesc']);
-    $ProjDescLong = mysql_real_escape_string($_POST['longdesc']);
+    $ProjVendors = $_POST['vendors'];
+    $ProjDescShort = $_POST['shortdesc'];
+    $ProjDescLong = $_POST['longdesc'];
 
     $sql = "UPDATE project_nfo SET
         ProjName='$ProjName',
@@ -140,7 +142,6 @@ function getProjectId($ProjName) {
         }
     }
 }
-
 
 function removeProject($ProjectId)
 {
