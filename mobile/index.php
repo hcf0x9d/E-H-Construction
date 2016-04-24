@@ -9,7 +9,7 @@
     mysql_select_db("$database") or die(mysql_error());
     
     $sql = 'SELECT ProjName, ProjLink, ProjKeyImg, ProjKeyImgUrl, ProjDescShort
-            FROM project_nfo;';
+            FROM project_nfo WHERE ProjFeatured = "1" ORDER BY PID DESC;';
             //WHERE ProjFeatured = "1";';
             
     $data = mysql_query($sql) or die(mysql_error());

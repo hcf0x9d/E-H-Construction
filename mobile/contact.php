@@ -19,8 +19,8 @@
 <body>
     <div class="body-height">
     <?php include($path.'/library/includes/framework/head.inc.php'); ?>
-    <article class="p-20 pos-a pos-sw-corner">
-        <img src="/images/brent.jpg" alt="Brent Heath" />
+    <article class="p-20" style="position: relative;margin-top: 82px;">
+        <img src="<?php echo $urlBase; ?>/images/brent.jpg" alt="Brent Heath" />
         <h2 class="little-line mb-0" style="font-size:2.0em;">Brent Heath</h2>
         <p class="mt-0" style="font-size:1.3em !important;">
             <span ><a href="mailto:info@ehconstructionco.com" class="c-white">info<span id="at">{at}</span>ehconstructionco.com</a></span><br><br>

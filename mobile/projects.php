@@ -17,7 +17,8 @@
     while ($row = mysql_fetch_array($data)) {
         $ProjName = $row['ProjName'];
         $ProjLink = $row['ProjLink'];
-        $KeyImage = $urlBase.'/'.$row['ProjKeyImgUrl'].'480/'.$row['ProjKeyImg'];
+        // $KeyImage = $urlBase.'/'.$row['ProjKeyImgUrl'].'480/'.$row['ProjKeyImg'];
+        $KeyImage = $row['ProjKeyImgUrl'].'480/'.$row['ProjKeyImg'];
         
         $card = '
         <a href="/project/'.$ProjLink.'" class="picture-card pos-r d-b mb-10 c-white" style="height:200px;background:url('.$KeyImage.')center center no-repeat;background-size:cover;">

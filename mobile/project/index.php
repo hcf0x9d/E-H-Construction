@@ -64,7 +64,11 @@
     <title>E&amp;H Construction</title>
 
     <?php include($path.'/library/includes/style.pack.php'); ?>  
-    
+    <style>
+        #ProjectGallery img{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <?php include($path.'/library/includes/framework/head.inc.php'); ?>
