@@ -10,17 +10,17 @@ img{border:none;}
 @media only screen and (min-width: 1436px) {
     body{
         font-size:150% !important;
-    }    
+    }
 }
 @media only screen and (min-width: 1260px) {
     body{
         font-size:120% !important;
-    }    
+    }
 }
 @media only screen and (max-width: 959px) {
     body{
         font-size:80% !important;
-    }    
+    }
 }
 /* ============================================================================= */
 /* Colors                                                                        */
@@ -100,7 +100,7 @@ nav li a.current{background-color: rgba(97,165,192,0.7);}
 /* ============================================================================= */
 
 #proj-navigator{
-    
+
 }
     #proj-navigator span{
         margin: 0;
@@ -129,7 +129,7 @@ nav li a.current{background-color: rgba(97,165,192,0.7);}
             background:rgba(255,255,255,0.1);
         }
     #proj-navigator h4{margin: 0;}
-    
+
 .card{background-color: #fff;overflow:hidden;}
 .rotator-dots{margin-top: 5px;display: block;}
 .rotator-dots li{font-size:0.75em;margin-left:5px;cursor: pointer;}
@@ -189,15 +189,15 @@ textarea{
    color: #8C8781;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #8C8781;  
+   color: #8C8781;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #8C8781;  
+   color: #8C8781;
 }
-:-ms-input-placeholder {  
-   color: #8C8781;  
+:-ms-input-placeholder {
+   color: #8C8781;
 }
-    
+
 .btn{
     background:#61A598;
     border:none;
@@ -217,3 +217,28 @@ textarea{
     color:#865E3E;
     font-size: 1rem;
 }
+
+
+.social {
+	list-style-type: none;
+	margin: 1em 0 0;
+	padding: 0;
+}
+	.social-item {
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	.social-target {
+		color: #fff;
+	}
+
+	.social-icon {
+		fill: #fff;
+		width: 24px;
+		margin-top: 20px;
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+	}
