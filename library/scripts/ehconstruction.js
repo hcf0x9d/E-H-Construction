@@ -20,8 +20,6 @@ Slider.prototype.run = function () {
 	var cards = document.querySelectorAll('.rotator-card-captions-item');
 	var dots = document.querySelector('.rotator-dots');
 
-	// console.log(cards[0].parentElement.style);
-
 	// Set the initial live ones...
 	dots.children[0].classList += ' is-active';
 	imgs[0].classList += ' is-active';
@@ -29,21 +27,23 @@ Slider.prototype.run = function () {
 
 	cards[0].parentElement.style.height = cards[0].offsetHeight;
 
-	// TODO: Show first items
-	(function rotateCore(i) {
+	var timer = setTimeout(rotate, 5000);
+	var i;
 
-		if (i === s.slides.length) {
-			i = 1;
-		} else if (i < s.slides.length) {
+	function rotate() {
+
+		i = $('.rotator-card-captions-item.is-active').index();
+
+		if (i + 2 <= s.slides.length) {
 			i++;
+		} else {
+			i = 0;
 		}
 
-		setTimeout(function () {
-			rotateView(s.slides[i - 1]);
-			rotateCore(i);
-		}, 5000);
+		rotateView(s.slides[i]);
 
-	}(0));
+		timer = setTimeout(rotate, 5000);
+	}
 
 	function rotateView (id) {
 		var currImg = document.querySelector('.rotator-images-item.is-active');
@@ -58,20 +58,39 @@ Slider.prototype.run = function () {
 		imgs.forEach(function (v, i) {
 			if (imgs[i].dataset.project.indexOf(id) === 0) {
 
+				// Set the proper image to active (add to DOM / make opacity 1)
 				imgs[i].classList += ' is-active';
 
+				// Set the proper dot to active (change style)
 				dots.children[i].classList += ' is-active';
 
+				// Set the new card's opacity to 0 so we can fade it
+				cards[i].style.opacity = 0;
+
+				// Add the is-active class to the card which adds it to the DOM
 				cards[i].classList += ' is-active';
 
+				// Set the card container to the current card's height
 				cards[i].parentNode.parentNode.style.height = cards[i].offsetHeight + 'px';
 
+				// Set the card's opacity to 1, CSS will add a fade through transition
+				cards[i].style.opacity = 1;
 			}
 		});
 
 
 		// TODO: Get next item, fade out previous, fade in the new
 	}
+
+	$('.rotator-card').on('mouseenter mouseleave', function (e) {
+
+		if (e.type === 'mouseenter') {
+			clearTimeout(timer);
+		} else {
+			timer = setTimeout(rotate, 5000);
+		}
+	});
+
 };
 
 var sliderSet = new Slider('rotator-images-item', 'rotator-card-captions-item', 'rotator-dots');

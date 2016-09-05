@@ -950,7 +950,7 @@ img {
     .rotator-card-captions-item {
       box-sizing: content-box;
       display: none;
-      transition: opacity 1s ease; }
+      transition: opacity 0.5s ease; }
       .rotator-card-captions-item.is-active {
         display: block; }
   .rotator-card-title {
