@@ -1,0 +1,215 @@
+
+/**
+*  E&H Construction Styles
+*
+*  Filename: style.scss
+*  Creator: Jason Fukura
+*
+*/
+
+@charset 'UTF-8';
+
+// Variables
+@import "partials/_definitions.scss";
+@import "partials/_mediaqueries.scss";
+
+// Utilities
+@import "partials/_normalize.scss";
+
+// Components
+@import "partials/_grid.scss";
+// @import "partials/_base.scss";
+// @import "partials/_type.scss";
+@import "partials/_headerfooter.scss";
+@import "partials/_homerotator.scss";
+// @import "partials/_gallery.scss";
+
+// OLD STYLES
+
+/* atomic */
+
+html{background-color: #B6B0A3; height: 100%;}
+body{font-family: "futura-pt", sans-serif;font-weight:400;font-style:normal;font-size:100%;color:#fff; height: 100%;}
+img{border:none;}
+
+
+
+.full-height {
+	height: 100%;
+}
+
+@media only screen and (min-width: 1436px) {
+    body{
+        font-size:150% !important;
+    }
+}
+@media only screen and (min-width: 1260px) {
+    body{
+        font-size:120% !important;
+    }
+}
+@media only screen and (max-width: 959px) {
+    body{
+        font-size:80% !important;
+    }
+}
+/* ============================================================================= */
+/* Colors                                                                        */
+/* ============================================================================= */
+
+
+a{color:#61A598;text-decoration:none;}
+    a:after{content:'';}
+
+    a:hover{text-decoration:underline;}
+    a:visited{text-decoration:#865E3E;} /* Will need an override for the covers */
+
+.ls-n004{letter-spacing: -0.04em;}
+
+.little-line:after{display:block;padding-top:0.3em;content:'\2014';}
+
+.link:after{content:' \f105';font-family:FontAwesome;}
+
+.helper{
+    font-weight:700;
+    color:#8C8781;
+}
+    .helper a{
+        color:#8c8781;
+        text-decoration: underline;
+    }
+.page-header{font-size:1.5em;font-weight:400;text-transform:uppercase;line-height:0.9em;}
+
+h1{}
+h2{}
+h3{}
+h4{font-size:1em;font-weight:700;}
+
+footer{font-size:0.8em;}
+.text-shadow{text-shadow: 0 0 10px rgba(0,0,0,0.1);}
+/* ============================================================================= */
+/* Navigation                                                                    */
+/* ============================================================================= */
+
+nav li a{font-size:1.5em;text-transform: uppercase;display: block;padding-left: 10px;}
+nav li a:hover{background-color: rgba(97,165,192,0.3);text-decoration: none;}
+nav li a.current{background-color: rgba(97,165,192,0.7);}
+
+/* ============================================================================= */
+/* Widgets & Elements                                                            */
+/* ============================================================================= */
+
+#proj-navigator{
+
+}
+    #proj-navigator span{
+        margin: 0;
+        padding: 0;
+        line-height: 2em;
+        width:10%;
+        display: inline-block;
+        text-align: center;
+        float:left;
+    }
+    #proj-navigator span:nth-child(2){
+        width:80%
+    }
+    #proj-navigator span:nth-child(3){
+        float:right;
+    }
+    #proj-navigator span a{
+        line-height: 2em;
+        display: block;
+        width:100%;
+        text-decoration: none;
+        background:rgba(255,255,255,0.05);
+        color:#fff;
+    }
+        #proj-navigator span a:hover{
+            background:rgba(255,255,255,0.1);
+        }
+    #proj-navigator h4{margin: 0;}
+
+.card{background-color: #fff;overflow:hidden;}
+
+
+.gallery{float:right;display: inline-block;}
+        .gallery li{list-style-type: none;display: block;float: left;width:30%;margin:0 5% 5% 0;position: relative;}
+            .gallery li img{width:100%;}
+        .gallery li:nth-child(3n+0){
+            margin:0 0 5% 0;
+        }
+.img-cover{opacity:0;text-align: center;cursor: pointer;background-color:rgba(97,165,192,0.5);;position: absolute;width: 100%;height: 100%;top: 0;left: 0;vertical-align: middle;}
+    .img-cover:hover{opacity:1;}
+    .img-cover i{font-size:2em;margin-top: 35%;opacity:0.8;}
+.picture-card .card-cover{background-color:rgba(65,75,78,0.5);width:100%;height:100%;z-index:9;}
+.picture-card:hover .card-cover{background-color:transparent;}
+.picture-card:visited .card-cover{background-color:rgba(65,75,78,0.9) !important;}
+
+#lightboxbox{position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: table;}
+    .lb-imgwrap{display: block;vertical-align: middle;text-align: center;}
+#shade{position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: block;
+    background:url(/images/ajax-loader.gif) rgba(65,75,78,0.9) center center no-repeat;
+}
+#next-btn,
+#prev-btn{
+    opacity:0.5;
+}
+    #next-btn:hover,
+    #prev-btn:hover{
+        opacity:1;
+    }
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea{
+    border:0;
+    background:rgba(255,255,255,0.1);
+    border-bottom:1px solid #8C8781;
+    border-radius:0;
+    color:#fff;
+    width:96%;
+    padding:2%;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-family: "futura-pt",sans-serif;font-weight:400;font-style:normal;
+}
+#contact-url{
+    display: none;
+}
+.label-floatlabel  {
+    padding-top:10px;
+}
+::-webkit-input-placeholder {
+   color: #8C8781;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #8C8781;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #8C8781;
+}
+:-ms-input-placeholder {
+   color: #8C8781;
+}
+
+.btn{
+    background:#61A598;
+    border:none;
+    border-radius:0;
+    padding: 10px 30px;
+    font-size: 1em;
+    color:#fff;
+    font-family: "futura-pt",sans-serif;font-weight:400;font-style:normal;
+}
+        .btn:hover{
+            background:#865E3E;
+        }
+        .btn:active{
+            background:#414B4E;
+        }
+.error{
+    color:#865E3E;
+    font-size: 1rem;
+}
+

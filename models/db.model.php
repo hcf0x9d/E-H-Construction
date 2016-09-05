@@ -35,7 +35,6 @@
 # - Hook in to APIs for printing
 #
 
-
 // Connect to database
 try {
 	$db = new PDO("mysql:host=".HOST.";dbname=".NAME.";charset=utf8", "".USER."", "".PASS."");
@@ -49,6 +48,7 @@ try {
 
 // Simple function to handle PDO prepared statements
 function sql($db, $q, $params, $return) {
+
 	// Prepare statement
 	$stmt = $db->prepare($q);
 

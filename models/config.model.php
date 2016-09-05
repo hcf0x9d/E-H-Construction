@@ -23,7 +23,7 @@ $contact_email = 'jason@jasonfukura.com';
 $host = substr($_SERVER['HTTP_HOST'], 0, 5);
 $localHost = 'ppadmin.dev';
 
-if(in_array($host, array('local','127.0','192.1')) || $_SERVER['HTTP_HOST'] == $localHost) {
+if(in_array($host, array('local','127.0','192.1', 'ehc.dev')) || $_SERVER['HTTP_HOST'] == $localHost) {
 	$local = true;
 } else {
 	$local = false;
@@ -37,23 +37,24 @@ if ($local) {
 	// Define the constants:
 	define('BASE_URI', '/path/to/html/folder/');
 	define('BASE_URL', 'http://localhost/directory/');
-	define('DB', '/path/to/mysql.inc.php');
+	define('DB', 'db.model.php');
 
 	define("HOST", "localhost");
-	define("USER", "username");
-	define("PASS", "password");
-	define("NAME", "database");
+	define("USER", "ehconstr_tech");
+	define("PASS", "dT8Cu6VvW?m?");
+	define("NAME", "ehconstr_ehconstruction");
 
 } else {
 	define('BASE_URI', '/path/to/live/html/folder/');
 	define('BASE_URL', 'http:// www.example.com/');
-	define('DB', '/path/to/live/mysql.inc.php');
+	define('DB', 'db.model.php');
 
 	define("HOST", "localhost");
-	define("USER", "username");
-	define("PASS", "password");
-	define("NAME", "database");
+	define("USER", "ehconstr_tech");
+	define("PASS", "dT8Cu6VvW?m?");
+	define("NAME", "ehconstr_ehconstruction");
 }
+
 
 /*
  * Most important setting!
