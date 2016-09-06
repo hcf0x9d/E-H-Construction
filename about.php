@@ -30,12 +30,12 @@ include BASE_URI.'/partials/dochead.inc.php';
                     &nbsp;
                 </div>
                 <header class="col-md-4">
-                    <h1 class="ta-r mt-20" style="font-size:3.5em;line-height:0.9em;">
+                    <h1 class="headline">
                         Sustainable Builders &amp; Craftsmen
                     </h1>
                 </header>
                 <main class="col-md-5">
-                    <h2 class="little-line mb-0">E&amp;H Construction</h2>
+                    <h2 class="subheadline little-line mod-nomt">E&amp;H Construction</h2>
                     <p>
                         We take great pride in the quality and service we can provide the home owner and architects.
                         Many of our projects have been on difficult and challenging sites, constructed on steep slopes,

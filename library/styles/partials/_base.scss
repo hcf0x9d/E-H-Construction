@@ -1,0 +1,65 @@
+
+html{background-color: $color-outerSpace; height: 100%;}
+body{font-family: "futura-pt", sans-serif;font-weight:400;font-style:normal;font-size:100%;color:#fff; height: 100%;}
+img{border:none;}
+
+
+
+.full-height {
+	height: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea{
+    border:0;
+    background:rgba(255,255,255,0.1);
+    border-bottom:1px solid #8C8781;
+    border-radius:0;
+    color:#fff;
+    width:96%;
+    padding:2%;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-family: "futura-pt",sans-serif;font-weight:400;font-style:normal;
+}
+
+#contact-url{
+    display: none;
+}
+.label-floatlabel  {
+    padding-top:10px;
+}
+::-webkit-input-placeholder {
+   color: #8C8781;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #8C8781;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #8C8781;
+}
+:-ms-input-placeholder {
+   color: #8C8781;
+}
+
+.btn{
+    background:#61A598;
+    border:none;
+    border-radius:0;
+    padding: 10px 30px;
+    font-size: 1em;
+    color:#fff;
+    font-family: "futura-pt",sans-serif;font-weight:400;font-style:normal;
+}
+        .btn:hover{
+            background:#865E3E;
+        }
+        .btn:active{
+            background:#414B4E;
+        }
+.error{
+    color:#865E3E;
+    font-size: 1rem;
+}

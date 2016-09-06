@@ -1,0 +1,47 @@
+.hero {
+  margin-bottom: 2em;
+  position: relative;
+
+  &-title {
+    bottom: 0;
+    font: normal 3.25em/1 $font-eloquent;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+  }
+}
+
+.gallery {
+  list-style-type: none;
+  margin-top: 20px;
+
+  &-item {
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+
+    &-image {
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover .gallery-item-image {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+footer{font-size:0.8em;}
+.text-shadow{text-shadow: 0 0 10px rgba(0,0,0,0.1);}
+
+
+
+#lightboxbox{position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: table;}
+    .lb-imgwrap{display: block;vertical-align: middle;text-align: center;}
+#shade{position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: block;
+    background:url(/images/ajax-loader.gif) rgba(65,75,78,0.9) center center no-repeat;
+}
+
+

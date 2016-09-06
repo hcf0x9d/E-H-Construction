@@ -1,6 +1,6 @@
 <?php
 
-
+// TODO: Annotate this code
 function projectListModel() {
 	include 'db.model.php';
 
@@ -8,7 +8,6 @@ function projectListModel() {
 
 	return $projectArray;
 }
-
 
 function projectDetailModel() {
 	include 'db.model.php';
@@ -19,11 +18,9 @@ function projectDetailModel() {
 
 	$pid = $projectDetail[0]['PID'];
 
-	// TODO: Need to get PID for these two items...
 	$prevProject = sql($db, "SELECT ProjLink, ProjName FROM project_nfo WHERE PID > ? ORDER BY PID LIMIT 1", array($pid), "prev");
 	$nextProject = sql($db, "SELECT ProjLink, ProjName FROM project_nfo WHERE PID > ? ORDER BY PID LIMIT 1", array($pid), "next");
 
-	// return $projectDetail;
 	return array("detail" => $projectDetail, "previous" => $prevProject, "next" => $nextProject);
 
 }

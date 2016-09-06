@@ -1,27 +1,5 @@
 <?php
 
-// Redirect?
-//userAgent($_SERVER['HTTP_USER_AGENT']);
-
-// function userAgent($ua) {
-
-//     $iphone = strstr(strtolower($ua), 'iphone'); //Search for 'mobile' in user-agent (iPhone have that)
-//     $android = strstr(strtolower($ua), 'android'); //Search for 'android' in user-agent
-//     $windowsPhone = strstr(strtolower($ua), 'phone'); //Search for 'phone' in user-agent (Windows Phone uses that)
-//     $iPad = strstr(strtolower($ua),'ipad');
-
-//     if($iphone || $android || $windowsPhone){ //If it's a phone and NOT a tablet
-//         header('Location: http://m.ehconstructionco.com'.$_SERVER[REQUEST_URI]);
-//     }
-//     if($iPad){
-//         // return 'desktop';
-//     }
-//     else{
-//         //return 'desktop';
-//     }
-// }
-
-
 // TODO: This could be cleaned up a bit.
 function homeRotator () {
     include '/models/rotator.models.php';
@@ -109,8 +87,6 @@ function projectDetail () {
     }
 
     $project = Array('name' => $name, 'vendors' => $vendors, 'hero' => $hero, 'summary' => $summary, 'description' => $description);
-    // print_r($projectDetails);
-    //
 
     $imageHTML = projectImageBuilder($images);
 
@@ -122,14 +98,12 @@ function projectImageBuilder($imageArray) {
 
     foreach ($imageArray as $key => $value) {
 
-        $images .='<li class="col-md-4">
-            <div class="img-cover anim lightbox">
-                <i class="fa fa-search-plus c-white"></i>
-            </div>
-            <img src="'.$value['image'].'" class="" data-caption="'.$value['imageCaption'].'" alt="'.$value['imageTitle'].'" data-name="'.$value['imageName'].'" itemprop="image" />
+        $images .='<li class="col-md-4 gallery-item">
+            <img src="'.$value['image'].'" class="gallery-item-image" data-caption="'.$value['imageCaption'].'" alt="'.$value['imageTitle'].'" data-name="'.$value['imageName'].'" itemprop="image" />
         </li>';
     }
 
     return $images;
 }
+
 ?>

@@ -1,11 +1,11 @@
 // TODO: Annotate the code...
-var Slider = function (imgCont, capCont, dotCont) {
+function Slider(imgCont, capCont, dotCont) {
 	this.imgCont = imgCont;
 	this.capCont = capCont;
 	this.dotCont = dotCont;
 
 	this.slides = [];
-};
+}
 
 // TODO: Cleanup the Slider code a bit. It's a touch messy.
 Slider.prototype.run = function () {
@@ -75,8 +75,6 @@ Slider.prototype.run = function () {
 			}
 		});
 
-
-		// TODO: Get next item, fade out previous, fade in the new
 	}
 
 	$('.rotator-card').on('mouseenter mouseleave', function (e) {
@@ -103,13 +101,34 @@ Slider.prototype.run = function () {
 
 };
 
-var sliderSet = new Slider('rotator-images-item', 'rotator-card-captions-item', 'rotator-dots');
-var slideData = document.querySelectorAll('.rotator-card-captions-item');
+function Lightbox() {
+	this.project = document.getElementById('project');
+	this.current = '';
+	this.caption = '';
+	this.next = '';
+	this.prev = '';
 
-slideData.forEach(function (v, i) {
+	this.run = function () {
+		// On input, do something
+		// if open -> open
+		// if close -> close
+		// if next/prev -> move
+	};
+//     var t = $('#ProjectGallery img[src="'+e+'"]').data('title');
+//     var c = $('#ProjectGallery img[src="'+e+'"]').data('caption');
+//     var next = $('#ProjectGallery img[src="'+e+'"]').parent('li').next().children('img').attr('src');
+//     var prev = $('#ProjectGallery img[src="'+e+'"]').parent('li').prev().children('img').attr('src');
+}
 
-	sliderSet.slides.push(v.dataset.project);
+Lightbox.prototype.open = function () {
+	// Open functions
+};
 
-});
+Lightbox.prototype.close = function () {
+	// Close functions
+};
 
-sliderSet.run();
+Lightbox.prototype.changeImage = function () {
+	// Change the image
+};
+// Mail function moves to here...
