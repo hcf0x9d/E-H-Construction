@@ -23,7 +23,7 @@ $contact_email = 'jason@jasonfukura.com';
 $host = substr($_SERVER['HTTP_HOST'], 0, 5);
 $localHost = 'ppadmin.dev';
 
-if(in_array($host, array('local','127.0','192.1', 'ehc.dev')) || $_SERVER['HTTP_HOST'] == $localHost) {
+if(in_array($host, array('local','127.0','192.1', 'ehc.d')) || $_SERVER['HTTP_HOST'] == $localHost) {
 	$local = true;
 } else {
 	$local = false;
@@ -35,8 +35,8 @@ if ($local) {
 	$debug = TRUE;
 
 	// Define the constants:
-	define('BASE_URI', '/path/to/html/folder/');
-	define('BASE_URL', 'http://localhost/directory/');
+	define('BASE_URI', 'C:\xampp\htdocs\ehconstruction');
+	define('BASE_URL', 'http://ehc.dev');
 	define('DB', 'db.model.php');
 
 	define("HOST", "localhost");

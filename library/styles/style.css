@@ -682,7 +682,7 @@ img {
     margin-left: 0%; } }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px; }
+    width: 100%; }
 
   .col, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left; }
@@ -875,14 +875,59 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+a {
+  color: #61A598;
+  text-decoration: none; }
+
+a:after {
+  content: ''; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:visited {
+  text-decoration: #865E3E; }
+
+/* Will need an override for the covers */
+.ls-n004 {
+  letter-spacing: -0.04em; }
+
+.little-line:after {
+  display: block;
+  padding-top: 0.3em;
+  content: '\2014'; }
+
+.link:after {
+  content: ' \f105';
+  font-family: FontAwesome; }
+
+.helper {
+  font-weight: 700;
+  color: #8C8781; }
+
+.helper a {
+  color: #8c8781;
+  text-decoration: underline; }
+
+h4 {
+  font-size: 1em;
+  font-weight: 700; }
+
+.page-header {
+  font: normal 400 1.5em/0.9em "futura-pt", sans-serif;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-transform: uppercase; }
+
 .header {
-  background: rgba(65, 75, 78, 0.5); }
+  background: rgba(46, 53, 56, 0.5);
+  padding: 20px; }
   .header-logo {
     max-width: 150px; }
 
 .nav {
   list-style-type: none;
-  margin: 0;
+  margin: 3em 0;
   padding: 0; }
   .nav-item {
     list-style-type: none; }
@@ -915,8 +960,9 @@ img {
     .rotator-images-item.is-active {
       opacity: 1; }
 .rotator-controls {
-  position: absolute;
-  bottom: 20px; }
+  bottom: 20px;
+  left: 0;
+  position: absolute; }
 .rotator-dots {
   list-style-type: none;
   margin-top: 10px; }
@@ -969,17 +1015,42 @@ img {
     clear: both;
     font: normal 400 1em/1.4 "futura-pt", sans-serif; }
 
-.rotator-captions li {
-  display: none; }
-
-.rotator-captions li.current {
-  display: block;
-  width: 100%;
-  height: 100%; }
+.project-card {
+  list-style-type: none;
+  margin-bottom: 30px; }
+  .project-card-target {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    min-height: 200px;
+    position: relative;
+    transition: box-shadow 0.2s ease; }
+    .project-card-target:hover {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); }
+      .project-card-target:hover .project-card-cover {
+        opacity: 0; }
+  .project-card-title {
+    color: #fff;
+    font: normal 700 1.75em/1 "futura-pt", sans-serif;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    text-align: right;
+    text-shadow: 0 0 10px #23282a;
+    width: 100%;
+    z-index: 10; }
+  .project-card-cover {
+    background: rgba(65, 75, 78, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity 0.2s ease; }
 
 /* atomic */
 html {
-  background-color: #B6B0A3;
+  background-color: #414b4e;
   height: 100%; }
 
 body {
@@ -1008,50 +1079,6 @@ img {
 /* ============================================================================= */
 /* Colors                                                                        */
 /* ============================================================================= */
-a {
-  color: #61A598;
-  text-decoration: none; }
-
-a:after {
-  content: ''; }
-
-a:hover {
-  text-decoration: underline; }
-
-a:visited {
-  text-decoration: #865E3E; }
-
-/* Will need an override for the covers */
-.ls-n004 {
-  letter-spacing: -0.04em; }
-
-.little-line:after {
-  display: block;
-  padding-top: 0.3em;
-  content: '\2014'; }
-
-.link:after {
-  content: ' \f105';
-  font-family: FontAwesome; }
-
-.helper {
-  font-weight: 700;
-  color: #8C8781; }
-
-.helper a {
-  color: #8c8781;
-  text-decoration: underline; }
-
-.page-header {
-  font-size: 1.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 0.9em; }
-
-h4 {
-  font-size: 1em;
-  font-weight: 700; }
-
 footer {
   font-size: 0.8em; }
 

@@ -1,16 +1,13 @@
+// TODO: Annotate the code...
 var Slider = function (imgCont, capCont, dotCont) {
 	this.imgCont = imgCont;
 	this.capCont = capCont;
 	this.dotCont = dotCont;
-	this.fullScreen = true;
 
 	this.slides = [];
-
-	if (this.fullScreen === true) {
-		document.getElementsByTagName('html')[0].style.background = '#414b4e';
-	}
 };
 
+// TODO: Cleanup the Slider code a bit. It's a touch messy.
 Slider.prototype.run = function () {
 	'use strict';
 
@@ -90,6 +87,19 @@ Slider.prototype.run = function () {
 			timer = setTimeout(rotate, 5000);
 		}
 	});
+
+	var dot = document.querySelectorAll('.rotator-dots-dot');
+	var len;
+	for (i = 0, len = dot.length; i < len; i++) {
+		dot[i].addEventListener('click', switchProjectStack);
+	}
+
+	function switchProjectStack(event) {
+
+		var clicked = event.target.dataset.project;
+
+		rotateView(clicked);
+	}
 
 };
 

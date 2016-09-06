@@ -19,16 +19,16 @@
 // Components
 @import "partials/_grid.scss";
 // @import "partials/_base.scss";
-// @import "partials/_type.scss";
+@import "partials/_type.scss";
 @import "partials/_headerfooter.scss";
 @import "partials/_homerotator.scss";
-// @import "partials/_gallery.scss";
+@import "partials/_projects.scss";
 
 // OLD STYLES
 
 /* atomic */
 
-html{background-color: #B6B0A3; height: 100%;}
+html{background-color: $color-outerSpace; height: 100%;}
 body{font-family: "futura-pt", sans-serif;font-weight:400;font-style:normal;font-size:100%;color:#fff; height: 100%;}
 img{border:none;}
 
@@ -58,32 +58,7 @@ img{border:none;}
 /* ============================================================================= */
 
 
-a{color:#61A598;text-decoration:none;}
-    a:after{content:'';}
 
-    a:hover{text-decoration:underline;}
-    a:visited{text-decoration:#865E3E;} /* Will need an override for the covers */
-
-.ls-n004{letter-spacing: -0.04em;}
-
-.little-line:after{display:block;padding-top:0.3em;content:'\2014';}
-
-.link:after{content:' \f105';font-family:FontAwesome;}
-
-.helper{
-    font-weight:700;
-    color:#8C8781;
-}
-    .helper a{
-        color:#8c8781;
-        text-decoration: underline;
-    }
-.page-header{font-size:1.5em;font-weight:400;text-transform:uppercase;line-height:0.9em;}
-
-h1{}
-h2{}
-h3{}
-h4{font-size:1em;font-weight:700;}
 
 footer{font-size:0.8em;}
 .text-shadow{text-shadow: 0 0 10px rgba(0,0,0,0.1);}

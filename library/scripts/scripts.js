@@ -10,10 +10,10 @@ function rotateContent(group){
     // Variables
     var $currImage = $('#rotator-images li.current');
     var $newImage = $('#rotator-images li[data-group="group'+group+'"]');
-    
+
     var $currCap = $('.rotator-captions li.current');
     var $newCap = $('.rotator-captions li[data-group="group'+group+'"]');
-    
+
     var $currDot = $('.rotator-dots li.current');
     var $newDot = $('.rotator-dots li[data-selector="'+group+'"]');
 
@@ -25,16 +25,16 @@ function rotateContent(group){
         });
         $newImage.fadeIn(200);
     }
-    
+
     // Change the captions
     $currCap.fadeOut(0, function(){
         $newCap.addClass('current').siblings().removeClass('current');
         $('.rotator-captions li.current').fadeIn(0);
     });
-    
+
     // Change the dot
     $newDot.addClass('current').siblings().removeClass('current');
-    
+
     timer = setTimeout(function(){
         rotate();
     }, 5000);
@@ -42,7 +42,7 @@ function rotateContent(group){
 
 function rotate(){
     var $nextGroup = $('.rotator-dots li.current').next().data('selector');
-    
+
     if($nextGroup == undefined){
         $first = $('.rotator-dots li:first-child').data('selector');
 
@@ -53,18 +53,18 @@ function rotate(){
 }
 
 function setNav(){
-    
+
     var pathname = window.location.pathname;
     var pathname = pathname.split('/');
     var pathname = pathname[1];
-    
+
     var $navEl = $('nav a');
 
     $navEl.each(function(){
         var $href = $(this).attr('href');
         var $href = $href.split('/');
         var $href = $href[1];
-        
+
         if(pathname == $href)
         {
             $(this).addClass('current');
@@ -76,7 +76,7 @@ function setNav(){
             $('a[href="/updates"]').addClass('current');
         }
     });
-    
+
 }
 
 function fullheight(e){
@@ -90,24 +90,24 @@ function lightbox(e){
     var c = $('#ProjectGallery img[src="'+e+'"]').data('caption');
     var next = $('#ProjectGallery img[src="'+e+'"]').parent('li').next().children('img').attr('src');
     var prev = $('#ProjectGallery img[src="'+e+'"]').parent('li').prev().children('img').attr('src');
-    
+
     //var e = e.split('/');
     var e = e.replace('200/','');
     var full = new Image();
-    
+
     function preload()
     {
         // Show the shade/preloader
         var $shade = '<div id="shade"></div>';
         $($shade).hide().appendTo('body').fadeIn(250);
         // hide the scroll bars
-        //$('html').css('overflow-y','scroll');  
+        //$('html').css('overflow-y','scroll');
         //$("body").css({ "height" : ($(window).height() - 1) + 'px', "overflow": "hidden" });
-        
+
         full.src = e;
         full.onload = openLightbox;
     }
-    
+
     function openLightbox()
     {
         var h = $(window).height();
@@ -119,9 +119,9 @@ function lightbox(e){
                                     <img id="full-image" src="'+full.src+'" alt="" style="max-width:100%;max-height:100%;margin:0 auto;" />\
                                 </div>\
                                 <i id="next-btn" class="fa fa-angle-right pos-a anim" style="right:10px;top:50%;font-size:2em;" onClick="changeImage(\''+next+'\');"></i>\
-                            </div>';        
+                            </div>';
         /*
-        
+
         //Removed the info card temporarily
         <div class="infoBox card p-20 pos-se-corner pos-a" style="width:200px;margin:20px;">\
             <h2 class="helper mt-0 mb-5" style="font-size:1em;">'+p+'</h2>\
@@ -136,24 +136,24 @@ function lightbox(e){
         } else {
             $('#prev-btn').show();
         }
-        
+
         if(!next){
             $('#next-btn').hide();
         } else {
             $('#next-btn').show();
         }
     }
-    
+
     preload();
 }
 
 function changeImage(e){
     var next = $('#ProjectGallery img[src="'+e+'"]').parent('li').next().children('img').attr('src');
     var prev = $('#ProjectGallery img[src="'+e+'"]').parent('li').prev().children('img').attr('src');
-    
+
     var e = e.replace('200/','');
     var full = new Image();
-    
+
     full.src = e;
     full.onload = switchImage;
 
@@ -163,13 +163,13 @@ function changeImage(e){
             $('#next-btn').attr('onClick', 'changeImage(\''+next+'\');')
             $('#prev-btn').attr('onClick', 'changeImage(\''+prev+'\');')
         }).fadeTo(250, 1);
-        
+
         if(!prev){
             $('#prev-btn').hide();
         } else {
             $('#prev-btn').show();
         }
-        
+
         if(!next){
             $('#next-btn').hide();
         } else {

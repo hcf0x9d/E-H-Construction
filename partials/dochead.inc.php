@@ -6,7 +6,11 @@
     <title>E&amp;H Construction</title>
 	<meta name="description" content="Seattle based luxury home builders, E&amp;H Construction build sustainable, custom homes in the Seattle, Bothell, Bellevue and Redmond areas.">
 
-	<?php include($path.'/library/includes/style.pack.php'); ?>
+	<?php
+
+	include BASE_URI.'/library/includes/style.pack.php';
+
+	?>
 
 </head>
 <body>

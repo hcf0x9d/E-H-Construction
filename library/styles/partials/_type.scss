@@ -1,0 +1,32 @@
+a{color:#61A598;text-decoration:none;}
+    a:after{content:'';}
+
+    a:hover{text-decoration:underline;}
+    a:visited{text-decoration:#865E3E;} /* Will need an override for the covers */
+
+.ls-n004{letter-spacing: -0.04em;}
+
+.little-line:after{display:block;padding-top:0.3em;content:'\2014';}
+
+.link:after{content:' \f105';font-family:FontAwesome;}
+
+.helper{
+    font-weight:700;
+    color:#8C8781;
+}
+    .helper a{
+        color:#8c8781;
+        text-decoration: underline;
+    }
+
+h1{}
+h2{}
+h3{}
+h4{font-size:1em;font-weight:700;}
+
+.page-header {
+	font: normal 400 1.5em/0.9em $font-futura;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	text-transform: uppercase;
+}

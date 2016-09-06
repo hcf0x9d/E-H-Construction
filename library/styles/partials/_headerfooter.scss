@@ -1,5 +1,6 @@
 .header {
-  background: rgba(65, 75, 78, 0.5);
+  background: hsla(194, 9.1, 20, 0.5);
+  padding: 20px;
 
   &-logo {
     max-width: 150px;
@@ -9,7 +10,7 @@
 
 .nav {
   list-style-type: none;
-  margin: 0;
+  margin: 3em 0;
   padding: 0;
 
   &-item{
