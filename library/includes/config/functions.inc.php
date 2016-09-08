@@ -13,7 +13,7 @@ function userAgent($ua) {
         header('Location: http://m.ehconstructionco.com'.$_SERVER[REQUEST_URI]);
     }
     if($iPad){
-        // return 'desktop';
+        header('Location: http://m.ehconstructionco.com'.$_SERVER[REQUEST_URI]);
     }
     else{
         //return 'desktop';
