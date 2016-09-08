@@ -18,7 +18,7 @@ include 'partials/dochead.inc.php';
     <section class="container">
         <div class="row">
             <div class="col-md-3">
-                <?php include('/library/includes/framework/head.inc.php'); ?>
+                <?php include BASE_URI.'/library/includes/framework/head.inc.php'; ?>
             </div>
 
             <h1 class="col-md-9 page-header">Selected Projects</h1>
