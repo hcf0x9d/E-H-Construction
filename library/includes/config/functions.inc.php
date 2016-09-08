@@ -1,6 +1,5 @@
 <?php
 // Redirect?
-userAgent($_SERVER['HTTP_USER_AGENT']);
 
 function userAgent($ua) {
 

@@ -1,3 +1,7 @@
+<?php
+userAgent($_SERVER['HTTP_USER_AGENT']);
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
