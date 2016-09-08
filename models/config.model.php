@@ -45,7 +45,7 @@ if ($local) {
 	define("NAME", "ehconstr_ehconstruction");
 
 } else {
-	define('BASE_URI', '/path/to/live/html/folder/');
+	define('BASE_URI', '/home1/ehconstr/public_html');
 	define('BASE_URL', 'http:// www.example.com/');
 	define('DB', 'db.model.php');
 

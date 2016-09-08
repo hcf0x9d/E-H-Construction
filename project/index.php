@@ -1,6 +1,6 @@
 <?php
 
-include '../models/config.model.php';
+include 'models/config.model.php';
 
 // Currently just userAgent
 include BASE_URI.'/library/includes/config/functions.inc.php';

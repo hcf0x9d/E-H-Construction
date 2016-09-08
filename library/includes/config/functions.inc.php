@@ -21,7 +21,7 @@ function userAgent($ua) {
 
 // TODO: This could be cleaned up a bit.
 function homeRotator () {
-    include '/models/rotator.models.php';
+    require BASE_URI.'/models/rotator.models.php';
 
     $captions = '';
     $images = '';
@@ -53,7 +53,7 @@ function homeRotator () {
         $dots .='<li class="rotator-dots-dot" data-project="'.$ProjLink.'"></li>';
 
     }
-
+    // print_r($images);
     return array('dots' => $dots, 'captions' => $captions, 'images' => $images);
 }
 
