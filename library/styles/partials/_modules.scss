@@ -83,3 +83,21 @@
 }
 
 footer{font-size:0.8em;}
+
+.social {
+  list-style-type: none;
+  margin-top: 20px;
+
+  &-item {
+
+  }
+
+  &-target {
+
+  }
+
+  &-icon {
+    width: 32px;
+    fill: #fff;
+  }
+}

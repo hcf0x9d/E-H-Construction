@@ -33,27 +33,7 @@
     <span class="c-white">info<span id="at" class="at">{at}</span>ehconstructionco.com</span><br>
     <span class="c-white">+1 425 486 4049</span>
 
-<<<<<<< HEAD
-</header>
-=======
-<![endif]-->
-
-<header class="grid_3 bg-outer-space-70">
-    <div class="pb-20 pl-10 pt-30">
-        <a href="/" title="E&amp;H Construction | Craftmanship in Construction">
-            <img src="/images/ehc-logo.svg" alt="E&amp;H Construction Company" class="replace pl-10" style="max-width:150px;"/>
-        </a>
-        <nav class="pt-20 pb-20">
-            <ul class="list-n ls-n004">
-                <li><a class="c-white anim" href="/projects" title="Past luxury home construction projects">Projects</a></li>
-                <!--<li><a class="c-white anim" href="/updates" title="Updates on current construction projects">Updates</a></li>-->
-                <li><a class="c-white anim" href="/about" title="About E&amp;H Construction">About</a></li>
-                <li><a class="c-white anim" href="/contact" title="Contact E&amp;H Construction">Contact</a></li>
-            </ul>
-        </nav>
-        <span class="c-white">info<span id="at" class="at">{at}</span>ehconstructionco.com</span><br>
-        <span class="c-white">+1 425 486 4049</span>
-        <ul class="social">
+    <ul class="social">
             <li class="social-item">
                 <a href="https://www.instagram.com/ehconstructionco/" class="social-target" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="social-icon">
@@ -64,6 +44,5 @@
                 </a>
             </li>
         </ul>
-    </div>
 </header>
->>>>>>> refs/remotes/origin/master
+
