@@ -9,7 +9,7 @@
 
 .nav {
   list-style-type: none;
-  margin: 3em 0;
+  margin: 3em 0 2em;
   padding: 0;
 
   &-item{
@@ -21,7 +21,7 @@
     color: $color-white;
     display: block;
     font-size: 1.5em;
-    padding-left: 10px;
+    padding: 2px 0 2px 10px;
     text-transform: uppercase;
     transition: background 0.2s ease;
 
@@ -33,5 +33,15 @@
     &.is-current {
       background: rgba(97, 165, 192, 0.7);
     }
+  }
+}
+
+.footer {
+
+  &-foot {
+    border-top: 1px solid;
+    opacity: 0.5;
+    padding-top: 1em;
+    padding-bottom: 3em;
   }
 }

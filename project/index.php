@@ -28,10 +28,10 @@ include BASE_URI.'/partials/dochead.inc.php';
 
         <h1 class="col-md-9 page-header">Selected Projects</h1>
 
-        <article class="col-md-9">
+        <article class="col-md-9 project-page">
 
             <!-- TODO: Make the background image a srcset so that we can utilize responsive images -->
-            <div class="hero" style="min-height:300px;background:url(<?php echo $project['details']['hero'];?>)center center no-repeat;background-size:cover;">
+            <div class="hero lightbox-handler" style="background:url(<?php echo $project['details']['hero'];?>)center center no-repeat;background-size:cover;">
                 <h1 id="project" class="hero-title" itemprop="name"><?php echo $project['details']['name'];?></h1>
             </div>
 
@@ -50,15 +50,15 @@ include BASE_URI.'/partials/dochead.inc.php';
         </article>
     </div>
     <script src="/library/scripts/ehconstruction.js"></script>
-    <script>
-        var box = new Lightbox();
 
-        console.log(box);
-    </script>
     <?php
         include BASE_URI.'/library/includes/framework/foot.inc.php';
         include BASE_URI.'/library/includes/script.pack.php';
     ?>
-
+    <script>
+        var box = new Lightbox();
+        box.run();
+        console.log(box);
+    </script>
 </body>
 </html>

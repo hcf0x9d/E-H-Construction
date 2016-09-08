@@ -1,6 +1,10 @@
 
 html{background-color: $color-outerSpace; height: 100%;}
-body{font-family: "futura-pt", sans-serif;font-weight:400;font-style:normal;font-size:100%;color:#fff; height: 100%;}
+body {
+    font: normal 400 1em/1.6 $font-futura;
+    color:#fff;
+    height: 100%;
+}
 img{border:none;}
 
 
@@ -9,49 +13,46 @@ img{border:none;}
 	height: 100%;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-textarea{
+.input{
+    font: normal 400 1em/1 $font-futura;
     border:0;
-    background:rgba(255,255,255,0.1);
-    border-bottom:1px solid #8C8781;
+    background:rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(255,255,255,0.5);
     border-radius:0;
     color:#fff;
     width:96%;
     padding:2%;
     margin-bottom: 10px;
-    font-size: 1em;
-    font-family: "futura-pt",sans-serif;font-weight:400;font-style:normal;
+
+    &#contact-url {
+        display: none;
+    }
 }
 
-#contact-url{
-    display: none;
-}
 .label-floatlabel  {
     padding-top:10px;
 }
 ::-webkit-input-placeholder {
-   color: #8C8781;
+   color: rgba(255,255,255,0.5);
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #8C8781;
+   color: rgba(255,255,255,0.5);
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #8C8781;
+   color: rgba(255,255,255,0.5);
 }
 :-ms-input-placeholder {
-   color: #8C8781;
+   color: rgba(255,255,255,0.5);
 }
 
 .btn{
-    background:#61A598;
+    background: $color-patina;
     border:none;
     border-radius:0;
     padding: 10px 30px;
     font-size: 1em;
     color:#fff;
-    font-family: "futura-pt",sans-serif;font-weight:400;font-style:normal;
+    font: normal 400 1em/1 $font-futura;
 }
         .btn:hover{
             background:#865E3E;

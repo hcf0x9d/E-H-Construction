@@ -25,16 +25,16 @@ include BASE_URI.'/partials/dochead.inc.php';
 
             <h1 class="col-md-9 page-header">About E&amp;H Construction</h1>
 
-            <article>
-                <div class="col-md-9 hero" style="min-height:300px;background:url(../../images/projects/2014/05/randolph1.jpg)center center no-repeat;background-size:cover;">
+            <article class="about-page col-md-9">
+                <div class="col-md-12 hero" style="min-height:300px;background:url(../../images/projects/2014/05/randolph1.jpg)center center no-repeat;background-size:cover;">
                     &nbsp;
                 </div>
-                <header class="col-md-4">
+                <header class="col-md-5">
                     <h1 class="headline">
                         Sustainable Builders &amp; Craftsmen
                     </h1>
                 </header>
-                <main class="col-md-5">
+                <main class="col-md-6">
                     <h2 class="subheadline little-line mod-nomt">E&amp;H Construction</h2>
                     <p>
                         We take great pride in the quality and service we can provide the home owner and architects.
