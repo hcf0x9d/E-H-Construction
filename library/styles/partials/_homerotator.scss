@@ -1,0 +1,113 @@
+.rotator {
+
+  &-images {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index:-10;
+
+    &-item {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      transition: opacity 0.5s ease;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &-controls {
+    bottom: 20px;
+    left: 0;
+    position: absolute;
+  }
+
+  &-dots {
+    list-style-type: none;
+    margin-top: 10px;
+
+    &-dot {
+      background: $color-naturalGray;
+      border-radius: 100%;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.875em;
+      height: 1em;
+      float: left;
+      margin-right: 5px;
+      opacity: 0.5;
+      transition: all 0.2s ease;
+      width: 1em;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &.is-active {
+        background: $color-patina;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-card {
+    background: $color-white;
+    box-sizing: content-box;
+    overflow: hidden;
+    padding: 20px;
+    transition: height 0.5s ease;
+
+    &-captions {
+      box-sizing: content-box;
+      list-style-type: none;
+      overflow: hidden;
+
+      &-item {
+        box-sizing: content-box;
+        display: none;
+        transition: opacity 0.5s ease;
+
+        &.is-active {
+          display: block;
+        }
+      }
+    }
+
+    &-title{
+      color: $color-outerSpace;
+      font: normal 400 1.5em/1.4 $font-eloquent;
+
+      &:after {
+        border-bottom: 2px solid;
+        content: "";
+        display: block;
+        clear: both;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        width: 0.875em;
+      }
+    }
+
+    &-body {
+      color: $color-naturalGray;
+      clear: both;
+      font: normal 400 1em/1.4 $font-futura;
+
+    }
+
+    &-target {
+
+    }
+
+  }
+
+}

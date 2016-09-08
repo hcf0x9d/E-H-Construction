@@ -1,0 +1,44 @@
+
+/**
+*  E&H Construction Styles
+*
+*  Filename: style.scss
+*  Creator: Jason Fukura
+*
+*/
+
+@charset 'UTF-8';
+
+// Variables
+@import "partials/_definitions.scss";
+@import "partials/_mediaqueries.scss";
+
+// Utilities
+@import "partials/_normalize.scss";
+
+// Components
+@import "partials/_grid.scss";
+@import "partials/_base.scss";
+@import "partials/_type.scss";
+@import "partials/_headerfooter.scss";
+@import "partials/_homerotator.scss";
+@import "partials/_projects.scss";
+@import "partials/_modules.scss";
+
+// OLD STYLES
+
+@media only screen and (min-width: 1436px) {
+    body{
+        font-size:150% !important;
+    }
+}
+@media only screen and (min-width: 1260px) {
+    body{
+        font-size:120% !important;
+    }
+}
+@media only screen and (max-width: 959px) {
+    body{
+        font-size:80% !important;
+    }
+}

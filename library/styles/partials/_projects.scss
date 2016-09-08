@@ -1,0 +1,50 @@
+.project {
+
+	&-card {
+		list-style-type: none;
+		margin-bottom: 30px;
+
+		&-target {
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+			display: block;
+			min-height: 200px;
+			position: relative;
+			transition: box-shadow 0.2s ease;
+
+			&:hover {
+				box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+				& .project-card-cover {
+					opacity: 0;
+				}
+			}
+		}
+
+		&-title {
+			bottom: 0;
+			color: $color-white;
+			font: normal 1.75em/1 $font-eloquent;
+			position: absolute;
+			padding: 20px;
+			right: 0;
+			text-align: right;
+			text-shadow: 0 0 10px hsla(194, 9.1, 15, 1);
+			width: 100%;
+			z-index: 10;
+		}
+
+		&-cover {
+			background: hsla(194, 9.1, 28, 0.5);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: opacity 0.2s ease;
+			width: 100%;
+		}
+	}
+
+	&-page {
+		margin-bottom: 4em;
+	}
+}

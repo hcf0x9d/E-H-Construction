@@ -5,17 +5,17 @@ $database = "ehconstruction";
 mysql_select_db("$database") or die(mysql_error());
 
 $sql = 'SELECT UpLink, UpDescShort FROM update_nfo LIMIT 1;';
-        
+
 $data = mysql_query($sql) or die(mysql_error());
 
 while ($row = mysql_fetch_array($data)) {
     $UpLink = $row['UpLink'];
     $UpDescShort = $row['UpDescShort'];
-} */   
+} */
 ?>
-    
 
-<footer class="container_12 mt-60 c-natural-gray">
+
+<footer class="container footer">
     <!--<div class="grid_3">&nbsp;</div>
     <div class="grid_5">
         <h4 class="m-0">Latest Updates</h4>
@@ -38,5 +38,5 @@ while ($row = mysql_fetch_array($data)) {
             <li><a href="/projects" class="c-natural-gray link">Projects</a></li>
         </ul>
     </div>-->
-    <div class="grid_12 mt-20" style="border-top:1px solid;">&copy; <?php echo date("Y"); ?> E&amp;H Construction</div>
+    <div class="col-md-12 footer-foot">&copy; <?php echo date("Y"); ?> E&amp;H Construction</div>
 </footer>

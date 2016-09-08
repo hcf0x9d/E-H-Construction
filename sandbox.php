@@ -2,6 +2,7 @@
 
 include 'models/config.model.php';
 
+
 // Currently just userAgent
 include 'library/includes/config/functions.inc.php';
 
@@ -11,10 +12,11 @@ $metaDescr = 'Description';
 $metaImage = 'IMAGE';
 
 // HTML DocHead
-include 'partials/dochead.inc.php';
+include BASE_URI.'/partials/dochead.inc.php';
 
 $rotator = homeRotator();
 
+print_r($rotator);
 ?>
 
     <section class="container full-height">
@@ -27,18 +29,18 @@ $rotator = homeRotator();
                 <div class="rotator-card mb-5 p-20">
                     <ul class="rotator-card-captions">
 
-                        <?php echo $rotator['captions']; ?>
+                        <?php // echo $rotator['captions']; ?>
                     </ul>
                 </div>
                 <ul class="rotator-dots">
-                    <?php echo $rotator['dots']; ?>
+                    <?php // echo $rotator['dots']; ?>
                 </ul>
             </div>
         </main>
     </section>
 
     <ul id="rotator-images" class="m-0 rotator-images" style="">
-        <?php echo $rotator['images']; ?>
+        <?php // echo $rotator['images']; ?>
     </ul>
 
     <?php include BASE_URI.'/library/includes/script.pack.php'; ?>
