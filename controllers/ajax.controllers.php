@@ -48,7 +48,6 @@ function mailer() {
 	error_reporting (E_ALL ^ E_NOTICE);
 	$post = (!empty($_POST)) ? true : false;
 
-	print_r($_POST);
 	if ($post) {
 
 	    $n = stripslashes($_POST['contact-name']);

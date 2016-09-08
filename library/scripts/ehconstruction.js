@@ -273,6 +273,7 @@ FormMail.prototype.validate = function () {
 
 FormMail.prototype.submit = function () {
 	var frm = this;
+	var note = $('#note');
 
     $.ajax({
         type: "POST",

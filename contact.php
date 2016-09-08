@@ -52,8 +52,12 @@ include BASE_URI.'/partials/dochead.inc.php';
                 </p>
             </div>
         </article>
-    </div>
 
+    </div>
+    <!-- TODO: Fix this -->
+        <br>
+        <br>
+        <br>
     <?php include BASE_URI.'/library/includes/framework/foot.inc.php'; ?>
 
     <?php include BASE_URI.'/library/includes/script.pack.php'; ?>
