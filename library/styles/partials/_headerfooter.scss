@@ -36,6 +36,18 @@
   }
 }
 
+@include media("<sm") {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .nav {
+
+  }
+}
+
 .footer {
 
   &-foot {
@@ -43,5 +55,13 @@
     opacity: 0.5;
     padding-top: 1em;
     padding-bottom: 3em;
+  }
+}
+
+@include media("<sm") {
+  .header {
+    &-logo{
+      width: 80px;
+    }
   }
 }

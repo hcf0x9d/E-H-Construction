@@ -17,7 +17,7 @@ $rotator = homeRotator();
 
 ?>
 
-    <section class="container full-height">
+    <section class="container full-height mod-full-bleed">
         <div class="col-md-3">
             <?php include BASE_URI.'/library/includes/framework/head.inc.php'; ?>
         </div>

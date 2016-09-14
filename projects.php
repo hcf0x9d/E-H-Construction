@@ -15,13 +15,13 @@ include 'partials/dochead.inc.php';
 
 ?>
 
-    <section class="container">
+    <section class="container mod-full-bleed">
         <div class="row">
             <div class="col-md-3">
                 <?php include BASE_URI.'/library/includes/framework/head.inc.php'; ?>
             </div>
 
-            <h1 class="col-md-9 page-header">Selected Projects</h1>
+            <h1 class="col-md-9 page-header visible-md visible-lg">Selected Projects</h1>
 
             <ul class="col-md-9">
                 <?php projectList(); ?>

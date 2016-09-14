@@ -23,7 +23,7 @@ include BASE_URI.'/partials/dochead.inc.php';
                 <?php include BASE_URI.'/library/includes/framework/head.inc.php'; ?>
             </div>
 
-            <h1 class="col-md-9 page-header">Contact E&amp;H Construction</h1>
+            <h1 class="col-md-9 page-header visible-md visible-lg">Contact E&amp;H Construction</h1>
 
         <article>
             <div class="col-md-9 hero mb-40" style="min-height:300px;background:url(/images/brent.jpg)top center no-repeat;background-size:cover;">
@@ -32,7 +32,7 @@ include BASE_URI.'/partials/dochead.inc.php';
             <div class="col-md-1">&nbsp;</div>
             <div class="col-md-4">
                 <div id="note"></div>
-                <form id="form" action="/library/include/mailer.inc.php" method="post">
+                <form class="visible-md visible-lg" id="form" action="/library/include/mailer.inc.php" method="post">
 
                     <input class="floatlabel ipt input" name="contact-name" id="contact-name" type="text" placeholder="Your name" tabindex="1">
                     <input class="floatlabel ipt input" name="contact-email" id="contact-email" type="email" placeholder="Email Address" tabindex="2">
