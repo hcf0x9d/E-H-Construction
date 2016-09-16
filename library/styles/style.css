@@ -945,7 +945,7 @@ img {
 
 @media (max-width: 767px) {
   .headline {
-    font-size: 3.25em;
+    font-size: 3em;
     margin-bottom: 20px;
     text-align: left; } }
 .subheadline {
@@ -1041,8 +1041,23 @@ p + p {
   padding-bottom: 3em; }
 
 @media (max-width: 767px) {
-  .header-logo {
-    width: 80px; } }
+  .header {
+    padding: 15px; }
+    .header-logo {
+      width: 50px; }
+
+  .nav {
+    margin: 0;
+    float: right; }
+    .nav-wrap {
+      float: right; }
+    .nav-item {
+      float: left;
+      font-size: 0.75rem;
+      line-height: 45px; }
+    .nav-target {
+      padding: 2px 5px;
+      text-transform: none; } }
 .rotator-images {
   position: absolute;
   left: 0;
@@ -1256,6 +1271,11 @@ footer {
     fill: #fff; }
 
 @media (max-width: 767px) {
+  .main {
+    margin-top: 81px;
+    padding-left: 0;
+    padding-right: 0; }
+
   .full-height {
     height: auto;
     position: initial; }

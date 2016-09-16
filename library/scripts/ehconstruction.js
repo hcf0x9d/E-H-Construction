@@ -22,7 +22,7 @@ Slider.prototype.run = function () {
 	imgs[0].classList += ' is-active';
 	cards[0].classList += ' is-active';
 
-	cards[0].parentElement.style.height = cards[0].offsetHeight + 'px';
+	// cards[0].parentElement.style.height = cards[0].offsetHeight + 'px';
 
 	var timer = setTimeout(rotate, 5000);
 	var i;

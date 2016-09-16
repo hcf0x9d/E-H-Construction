@@ -28,7 +28,7 @@ include BASE_URI.'/partials/dochead.inc.php';
 
         <h1 class="col-md-9 page-header visible-md visible-lg">Selected Projects</h1>
 
-        <article class="col-md-9 project-page">
+        <article class="col-md-9 project-page main">
 
             <!-- TODO: Make the background image a srcset so that we can utilize responsive images -->
             <div class="hero lightbox-handler" style="background:url(<?php echo $project['details']['hero'];?>)center center no-repeat;background-size:cover;">

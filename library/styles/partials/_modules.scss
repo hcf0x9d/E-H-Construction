@@ -119,6 +119,12 @@ footer{font-size:0.8em;}
 
 
 @include media("<sm") {
+  .main {
+    margin-top: 81px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .full-height {
     height: auto;
     position: initial;

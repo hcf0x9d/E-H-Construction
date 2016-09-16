@@ -25,7 +25,7 @@ include BASE_URI.'/partials/dochead.inc.php';
 
             <h1 class="col-md-9 page-header visible-md visible-lg">About E&amp;H Construction</h1>
 
-            <article class="about-page col-md-9">
+            <article class="about-page col-md-9 main">
                 <div class="col-md-12 hero" style="min-height:300px;background:url(../../images/projects/2014/05/randolph1.jpg)center center no-repeat;background-size:cover;">
                     &nbsp;
                 </div>

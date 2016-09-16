@@ -23,7 +23,7 @@ include 'partials/dochead.inc.php';
 
             <h1 class="col-md-9 page-header visible-md visible-lg">Selected Projects</h1>
 
-            <ul class="col-md-9">
+            <ul class="col-md-9 main">
                 <?php projectList(); ?>
             </ul>
         </div>
