@@ -943,6 +943,11 @@ img {
   font: normal 3.5em/1 "eloquent-jf-pro", serif;
   text-align: right; }
 
+@media (max-width: 767px) {
+  .headline {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: left; } }
 .subheadline {
   font: normal 1.5em/1.4 "eloquent-jf-pro", serif;
   margin-top: 20px; }
@@ -963,6 +968,9 @@ img {
   .helper a {
     color: rgba(255, 255, 255, 0.2); }
 
+@media (max-width: 767px) {
+  .helper {
+    display: block; } }
 .page-header {
   font: normal 400 1.5em/0.9em "futura-pt", sans-serif;
   padding-bottom: 1em;
@@ -1020,12 +1028,36 @@ p + p {
     .nav-target.is-current {
       background: rgba(97, 165, 192, 0.7); }
 
+@media (max-width: 767px) {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; } }
 .footer-foot {
   border-top: 1px solid;
   opacity: 0.5;
   padding-top: 1em;
   padding-bottom: 3em; }
 
+@media (max-width: 767px) {
+  .header {
+    padding: 15px; }
+    .header-logo {
+      width: 50px; }
+
+  .nav {
+    margin: 0;
+    float: right; }
+    .nav-wrap {
+      float: right; }
+    .nav-item {
+      float: left;
+      font-size: 0.75rem;
+      line-height: 45px; }
+    .nav-target {
+      padding: 2px 5px;
+      text-transform: none; } }
 .rotator-images {
   position: absolute;
   left: 0;
@@ -1078,7 +1110,6 @@ p + p {
     list-style-type: none;
     overflow: hidden; }
     .rotator-card-captions-item {
-      box-sizing: content-box;
       display: none;
       transition: opacity 0.5s ease; }
       .rotator-card-captions-item.is-active {
@@ -1099,6 +1130,21 @@ p + p {
     clear: both;
     font: normal 400 1em/1.4 "futura-pt", sans-serif; }
 
+@media (max-width: 767px) {
+  .rotator-controls {
+    bottom: 0;
+    width: 100%;
+    z-index: 100; }
+  .rotator-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; }
+  .rotator-card {
+    padding-bottom: 3em; }
+    .rotator-card-body {
+      display: none; }
+  .rotator-captions-target {
+    display: none; } }
 .project-card {
   list-style-type: none;
   margin-bottom: 30px; }
@@ -1134,6 +1180,15 @@ p + p {
 .project-page {
   margin-bottom: 4em; }
 
+@media (max-width: 767px) {
+  .hero {
+    height: 50vh; }
+    .hero-title {
+      font-size: 3.5em; }
+
+  .project-page {
+    padding-left: 0;
+    padding-right: 0; } }
 .hero {
   margin-bottom: 2em;
   min-height: 45vh;
@@ -1164,6 +1219,13 @@ p + p {
     .gallery-item:hover .gallery-item-image {
       opacity: 1; }
 
+@media (max-width: 767px) {
+  .gallery {
+    margin-top: 2em;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .gallery-item-image {
+      opacity: 1; } }
 .overlay {
   position: fixed;
   top: 0;
@@ -1208,6 +1270,22 @@ footer {
     width: 32px;
     fill: #fff; }
 
+@media (max-width: 767px) {
+  .main {
+    margin-top: 81px;
+    padding-left: 0;
+    padding-right: 0; }
+
+  .full-height {
+    height: auto;
+    position: initial; }
+
+  .container.mod-full-bleed {
+    padding-left: 0;
+    padding-right: 0; }
+    .container.mod-full-bleed .row {
+      margin-left: 0;
+      margin-right: 0; } }
 @media only screen and (min-width: 1436px) {
   body {
     font-size: 150% !important; } }
@@ -1216,6 +1294,6 @@ footer {
     font-size: 120% !important; } }
 @media only screen and (max-width: 959px) {
   body {
-    font-size: 80% !important; } }
+    font-size: 100% !important; } }
 
 /*# sourceMappingURL=style.css.map */

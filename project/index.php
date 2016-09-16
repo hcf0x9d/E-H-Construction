@@ -21,14 +21,14 @@ include BASE_URI.'/partials/dochead.inc.php';
 
 ?>
 
-    <div class="container" itemscope itemtype="http://schema.org/Thing">
+    <div class="container mod-full-bleed" itemscope itemtype="http://schema.org/Thing">
         <div class="col-md-3">
             <?php include BASE_URI.'/library/includes/framework/head.inc.php'; ?>
         </div>
 
-        <h1 class="col-md-9 page-header">Selected Projects</h1>
+        <h1 class="col-md-9 page-header visible-md visible-lg">Selected Projects</h1>
 
-        <article class="col-md-9 project-page">
+        <article class="col-md-9 project-page main">
 
             <!-- TODO: Make the background image a srcset so that we can utilize responsive images -->
             <div class="hero lightbox-handler" style="background:url(<?php echo $project['details']['hero'];?>)center center no-repeat;background-size:cover;">

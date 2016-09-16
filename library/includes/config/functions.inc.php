@@ -9,13 +9,13 @@ function userAgent($ua) {
     $iPad = strstr(strtolower($ua),'ipad');
 
     if($iphone || $android || $windowsPhone){ //If it's a phone and NOT a tablet
-        header('Location: http://m.ehconstructionco.com'.$_SERVER[REQUEST_URI]);
+        return true;
     }
     if($iPad){
-        header('Location: http://m.ehconstructionco.com'.$_SERVER[REQUEST_URI]);
+        return false;
     }
     else{
-        //return 'desktop';
+        return false;
     }
 }
 
@@ -86,7 +86,11 @@ function projectList () {
 
 function projectDetail () {
     include BASE_URI.'/models/project.models.php';
-
+    if (userAgent($_SERVER['HTTP_USER_AGENT']) === true) {
+        $size = 480;
+    } else {
+        $size = 200;
+    }
     $projectDetails = projectDetailModel();
 
     $images = Array();
@@ -98,7 +102,7 @@ function projectDetail () {
         $hero = $value['ProjKeyImgUrl'].$value['ProjKeyImg'];
 
         $ImageName = $value['ImageName'];
-        $Image = $value['ImageLink'].'200/'.$value['ImageName'];
+        $Image = $value['ImageLink'].$size.'/'.$value['ImageName'];
         $ImageTitle = $value['ImageTitle'];
         $ImageCaption = $value['ImageCaption'];
 

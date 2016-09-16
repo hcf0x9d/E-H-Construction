@@ -11,7 +11,7 @@
             </g>
         </svg>
     </a>
-    <nav>
+    <nav class="nav-wrap">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-target" href="/projects" aria-label="Past luxury home construction projects">
@@ -30,10 +30,12 @@
             </li>
         </ul>
     </nav>
-    <span class="c-white">info<span id="at" class="at">{at}</span>ehconstructionco.com</span><br>
-    <span class="c-white">+1 425 486 4049</span>
+    <div class="visible-lg">
+        <span class="c-white">info<span id="at" class="at">{at}</span>ehconstructionco.com</span><br>
+        <span class="c-white">+1 425 486 4049</span>
+    </div>
 
-    <ul class="social">
+    <ul class="social visible-lg">
             <li class="social-item">
                 <a href="https://www.instagram.com/ehconstructionco/" class="social-target" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="social-icon">

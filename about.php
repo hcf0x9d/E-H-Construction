@@ -17,15 +17,15 @@ include BASE_URI.'/partials/dochead.inc.php';
 
 ?>
 
-    <div class="container">
+    <div class="container mod-full-bleed">
         <div class="row">
             <div class="col-md-3">
                 <?php include BASE_URI.'/library/includes/framework/head.inc.php'; ?>
             </div>
 
-            <h1 class="col-md-9 page-header">About E&amp;H Construction</h1>
+            <h1 class="col-md-9 page-header visible-md visible-lg">About E&amp;H Construction</h1>
 
-            <article class="about-page col-md-9">
+            <article class="about-page col-md-9 main">
                 <div class="col-md-12 hero" style="min-height:300px;background:url(../../images/projects/2014/05/randolph1.jpg)center center no-repeat;background-size:cover;">
                     &nbsp;
                 </div>

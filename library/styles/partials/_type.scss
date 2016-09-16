@@ -3,6 +3,14 @@
     text-align: right;
 }
 
+@include media("<sm") {
+    .headline {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+}
+
 .subheadline {
     font: normal 1.5em/1.4 $font-eloquent;
     margin-top: 20px;
@@ -27,6 +35,12 @@
 
     & a{
         color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+@include media("<sm") {
+    .helper {
+        display: block;
     }
 }
 

@@ -36,6 +36,18 @@
   }
 }
 
+@include media("<sm") {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .nav {
+
+  }
+}
+
 .footer {
 
   &-foot {
@@ -43,5 +55,35 @@
     opacity: 0.5;
     padding-top: 1em;
     padding-bottom: 3em;
+  }
+}
+
+@include media("<sm") {
+  .header {
+    padding: 15px;
+
+    &-logo {
+      width: 50px;
+    }
+  }
+
+  .nav {
+    margin: 0;
+    float: right;
+
+    &-wrap {
+      float: right;
+    }
+
+    &-item {
+      float: left;
+      font-size: 0.75rem;
+      line-height: 45px;
+    }
+
+    &-target {
+      padding: 2px 5px;
+      text-transform: none;
+    }
   }
 }

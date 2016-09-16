@@ -22,7 +22,7 @@ Slider.prototype.run = function () {
 	imgs[0].classList += ' is-active';
 	cards[0].classList += ' is-active';
 
-	cards[0].parentElement.style.height = cards[0].offsetHeight;
+	// cards[0].parentElement.style.height = cards[0].offsetHeight + 'px';
 
 	var timer = setTimeout(rotate, 5000);
 	var i;
@@ -140,7 +140,7 @@ function Lightbox() {
 Lightbox.prototype.open = function (name) {
 	var lb = this;
 
-	if ($('.overlay').length <= 0) {
+	if ($('.overlay').length <= 0 && $(window).width > 768) {
 		var controls = '<ul class="overlay-controls"><li class="overlay-controls-target mod-left lightbox-pop"></li><li class="overlay-controls-target mod-right lightbox-pop"></li></ul>';
 
 		$('body').append(

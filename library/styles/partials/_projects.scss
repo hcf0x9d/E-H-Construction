@@ -48,3 +48,18 @@
 		margin-bottom: 4em;
 	}
 }
+
+@include media("<sm") {
+	.hero {
+		height: 50vh;
+
+		&-title {
+			font-size: 3.5em;
+		}
+	}
+
+	.project-page {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

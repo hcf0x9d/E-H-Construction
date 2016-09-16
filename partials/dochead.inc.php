@@ -1,5 +1,5 @@
 <?php
-userAgent($_SERVER['HTTP_USER_AGENT']);
+//userAgent($_SERVER['HTTP_USER_AGENT']);
 ?>
 
 <!doctype html>
