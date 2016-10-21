@@ -940,7 +940,7 @@ img {
   font-size: 1rem; }
 
 .headline {
-  font: normal 3.5em/1 "eloquent-jf-pro", serif;
+  font: normal 3.5em/1 "futura-pt", sans-serif;
   text-align: right; }
 
 @media (max-width: 767px) {
@@ -949,7 +949,7 @@ img {
     margin-bottom: 20px;
     text-align: left; } }
 .subheadline {
-  font: normal 1.5em/1.4 "eloquent-jf-pro", serif;
+  font: normal 1.5em/1.4 "futura-pt", sans-serif;
   margin-top: 20px; }
   .subheadline.mod-nomt {
     margin-top: 0; }
@@ -1116,7 +1116,7 @@ p + p {
         display: block; }
   .rotator-card-title {
     color: #414b4e;
-    font: normal 400 1.5em/1.4 "eloquent-jf-pro", serif; }
+    font: normal 400 1.5em/1.4 "futura-pt", sans-serif; }
     .rotator-card-title:after {
       border-bottom: 2px solid;
       content: "";
@@ -1161,7 +1161,7 @@ p + p {
   .project-card-title {
     bottom: 0;
     color: #fff;
-    font: normal 1.75em/1 "eloquent-jf-pro", serif;
+    font: normal 1.75em/1 "futura-pt", sans-serif;
     position: absolute;
     padding: 20px;
     right: 0;
@@ -1197,7 +1197,7 @@ p + p {
     background: rgba(65, 75, 78, 0.7);
     bottom: 0;
     display: block;
-    font: normal 3.25em/1 "eloquent-jf-pro", serif;
+    font: normal 3.25em/1 "futura-pt", sans-serif;
     left: 0;
     padding: 40px 20px 5px;
     position: absolute;
