@@ -16,7 +16,6 @@ $metaImage = 'IMAGE';
 include BASE_URI.'/partials/dochead.inc.php';
 
 ?>
-
     <div class="container">
         <div class="row">
             <div class="col-md-3">
