@@ -5,7 +5,7 @@ error_reporting (E_ALL ^ E_NOTICE);
 $post = (!empty($_POST)) ? true : false;
 
 if($post){
-	
+
     function ValidateEmail($e)
     {
         $test = filter_var($e, FILTER_VALIDATE_EMAIL);
@@ -13,7 +13,6 @@ if($post){
         return empty($test) ? true : false;
     }
 
-    
     $n = stripslashes($_POST['n']);
     $e = trim($_POST['e']);
     //$u = stripslashes($_POST['u']);
@@ -21,7 +20,7 @@ if($post){
     $subject =$n.' submitted a contact form';
     //$to = 'jason@jasonfukura.com';
     $to = 'ehconstruction1987@gmail.com';
-    
+
     $error = '';
 
     // Checks Name Field
@@ -37,16 +36,16 @@ if($post){
         $message .= "Name: ".$n."\n";
         $message .= "Email: ".$e."\n";
         $message .= "Message: ".$m."\n";
-        
+
         $headers = 'From: '.$e."\r\n".
         'Reply-To: '.$e."\r\n" .
         'X-Mailer: PHP/' . phpversion();
-        
-        $mail = mail( $to, $subject, $message, $headers ); 
+
+        $mail = mail( $to, $subject, $message, $headers );
 
         if($mail){
             $msg ="Your request has been submitted.  We will be in touch soon!";
-           
+
             // write the information to a CSV
             // Write to the file
             $csv = '../../contact.csv';
@@ -63,7 +62,7 @@ if($post){
 
 
             fclose($fp);
-            
+
         } else {
             $msg = 'Uh-oh!  Something went wrong!  <a href="mailto:'.$to.'?subject='.stripslashes($subject).'&body='.$m.'" style="text-decoration: underline;color: #fff;">Click to send the same message as an email</a>.';
         }
