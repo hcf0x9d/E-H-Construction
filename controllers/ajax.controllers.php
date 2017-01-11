@@ -56,8 +56,8 @@ function mailer() {
 	    $m = stripslashes($_POST['contact-msg']);
 
 	    $subject = $n.' submitted a contact form';
-	    $to = 'jason@jasonfukura.com';
-	    // $to = 'ehconstruction1987@gmail.com';
+	    // $to = 'jason@jasonfukura.com';
+	    $to = 'ehconstruction1987@gmail.com';
 
 	    $error = '';
 
