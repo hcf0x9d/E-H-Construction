@@ -53,7 +53,7 @@ $rotator = homeRotator();
         for (var i = 0; i < slideData.length; i++) {
             sliderSet.slides.push(slideData[i].dataset.project);
         }
-
+\
         sliderSet.run();
 
     </script>
