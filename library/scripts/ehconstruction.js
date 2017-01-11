@@ -18,9 +18,12 @@ Slider.prototype.run = function () {
 	var dots = document.querySelector('.rotator-dots');
 
 	// Set the initial live ones...
-	dots.children[0].classList += ' is-active';
-	imgs[0].classList += ' is-active';
-	cards[0].classList += ' is-active';
+	$(dots).children().eq(0).addClass('is-active');
+	// dots.children[0].classList += ' is-active';
+	$(imgs[0]).addClass('is-active');
+	// imgs[0].classList += ' is-active';
+	$(cards[0]).addClass('is-active');
+	// cards[0].classList += ' is-active';
 
 	// cards[0].parentElement.style.height = cards[0].offsetHeight + 'px';
 
