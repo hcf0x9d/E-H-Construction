@@ -52,7 +52,9 @@ Slider.prototype.run = function () {
 		currDot.classList = currDot.classList.value.replace(' is-active', '');
 		currCard.classList = currCard.classList.value.replace(' is-active', '');
 		// console.log(currCard.classList);
-		imgs.forEach(function (v, i) {
+
+		for (var i = 0; i < imgs.length; i++) {
+
 			if (imgs[i].dataset.project.indexOf(id) === 0) {
 
 				// Set the proper image to active (add to DOM / make opacity 1)
@@ -73,7 +75,7 @@ Slider.prototype.run = function () {
 				// Set the card's opacity to 1, CSS will add a fade through transition
 				cards[i].style.opacity = 1;
 			}
-		});
+		};
 
 	}
 
@@ -121,14 +123,15 @@ function Lightbox() {
 
 		var pops = document.querySelectorAll('.lightbox-pop');
 
-		pops.forEach(function (v, i) {
+		for (var i = 0; i < pops.length; i++) {
+
 			var src = v.attributes.src.value;
 			var n = src.lastIndexOf('/');
 
 			var img = new ImageObj(src.substring(n + 1), src.substring(0, n - 3), '', '');
 
 			lb.images.push(img);
-		});
+		};
 
 		$('body').on('click', function () {
 			lb.inputHandler();
