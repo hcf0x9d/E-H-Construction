@@ -51,9 +51,9 @@ $rotator = homeRotator();
         //     sliderSet.slides.push(v.dataset.project);
         // });
         for (var i = 0; i < slideData.length; i++) {
-            sliderSet.slides.push(slideData[i].dataset.project);
+            sliderSet.slides.push($(slideData[i]).attr('data-project'));
         }
-\
+
         sliderSet.run();
 
     </script>
