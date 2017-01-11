@@ -47,10 +47,14 @@ Slider.prototype.run = function () {
 		var currDot = document.querySelector('.rotator-dots-dot.is-active');
 		var currCard = document.querySelector('.rotator-card-captions-item.is-active');
 
-		currImg.classList = currImg.classList.value.replace(' is-active', '');
+		$(currImg).removeClass('is-active');
+		$(currDot).removeClass('is-active');
+		$(currCard).removeClass('is-active');
 
-		currDot.classList = currDot.classList.value.replace(' is-active', '');
-		currCard.classList = currCard.classList.value.replace(' is-active', '');
+		// currImg.classList = currImg.classList.value.replace(' is-active', '');
+
+		// currDot.classList = currDot.classList.value.replace(' is-active', '');
+		// currCard.classList = currCard.classList.value.replace(' is-active', '');
 		// console.log(currCard.classList);
 
 		for (var i = 0; i < imgs.length; i++) {
@@ -58,16 +62,18 @@ Slider.prototype.run = function () {
 			if (imgs[i].dataset.project.indexOf(id) === 0) {
 
 				// Set the proper image to active (add to DOM / make opacity 1)
-				imgs[i].classList += ' is-active';
-
+				// imgs[i].classList += ' is-active';
+				$(imgs[i]).addClass('is-active');
 				// Set the proper dot to active (change style)
-				dots.children[i].classList += ' is-active';
-
+				// dots.children[i].classList += ' is-active';
+				$(dots).children().eq([i]).addClass('is-active');
 				// Set the new card's opacity to 0 so we can fade it
-				cards[i].style.opacity = 0;
+				// cards[i].style.opacity = 0;
+				$(cards[i]).css('opacity', 0);
 
 				// Add the is-active class to the card which adds it to the DOM
-				cards[i].classList += ' is-active';
+				// cards[i].classList += ' is-active';
+				$(cards[i]).addClass('is-active');
 
 				// Set the card container to the current card's height
 				cards[i].parentNode.parentNode.style.height = cards[i].offsetHeight + 'px';
