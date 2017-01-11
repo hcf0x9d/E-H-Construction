@@ -47,9 +47,12 @@ $rotator = homeRotator();
         var sliderSet = new Slider('rotator-images-item', 'rotator-card-captions-item', 'rotator-dots');
         var slideData = document.querySelectorAll('.rotator-card-captions-item');
 
-        slideData.forEach(function (v, i) {
-            sliderSet.slides.push(v.dataset.project);
-        });
+        // slideData.forEach(function (v, i) {
+        //     sliderSet.slides.push(v.dataset.project);
+        // });
+        for (var i = 0; i < slideData.length; i++) {
+            sliderSet.slides.push(slideData[i].dataset.project);
+        }
 
         sliderSet.run();
 
