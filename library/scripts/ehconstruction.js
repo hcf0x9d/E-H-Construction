@@ -152,7 +152,7 @@ function Lightbox() {
 Lightbox.prototype.open = function (name) {
 	var lb = this;
 
-	if ($('.overlay').length <= 0 && $(window).width > 768) {
+	if ($('.overlay').length <= 0 && $(window).width() > 768) {
 		var controls = '<ul class="overlay-controls"><li class="overlay-controls-target mod-left lightbox-pop"></li><li class="overlay-controls-target mod-right lightbox-pop"></li></ul>';
 
 		$('body').append(
@@ -239,7 +239,7 @@ Lightbox.prototype.inputHandler = function () {
 		src = event.target.attributes.src.value;
 		name = src.substring(src.lastIndexOf('/') + 1);
 
-		this.open();
+		this.open(name);
 		this.changeImage(name);
 
 	} else if (classArray.indexOf(closeTriggers) > 0) {
