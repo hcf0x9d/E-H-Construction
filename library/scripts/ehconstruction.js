@@ -134,7 +134,7 @@ function Lightbox() {
 
 		for (var i = 0; i < pops.length; i++) {
 
-			var src = v.attributes.src.value;
+			var src = pops[i].attributes.src.value;
 			var n = src.lastIndexOf('/');
 
 			var img = new ImageObj(src.substring(n + 1), src.substring(0, n - 3), '', '');
