@@ -1,5 +1,5 @@
 # Use PHP5.4 Single php.ini as default
-AddHandler application/x-httpd-php54s .php
+#AddHandler application/x-httpd-php54s .php
 # For security reasons, Option followsymlinks cannot be overridden.
 #Options +FollowSymLinks -MultiViews
 Options +SymLinksIfOwnerMatch -MultiViews
@@ -38,12 +38,12 @@ Redirect 301 /projects-old/ /projects
 <FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css)$">
 Header set Cache-Control "max-age=290304000, public"
 </FilesMatch>
- 
+
 # 2 DAYS
 <FilesMatch "\.(xml|txt)$">
 Header set Cache-Control "max-age=172800, public, must-revalidate"
 </FilesMatch>
- 
+
 # 2 HOURS
 <FilesMatch "\.(php)$">
 Header set Cache-Control "max-age=7200, must-revalidate"

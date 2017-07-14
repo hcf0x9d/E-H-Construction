@@ -55,6 +55,7 @@ include BASE_URI.'/partials/dochead.inc.php';
         include BASE_URI.'/library/includes/framework/foot.inc.php';
         include BASE_URI.'/library/includes/script.pack.php';
     ?>
+
     <script>
         var box = new Lightbox();
         box.run();

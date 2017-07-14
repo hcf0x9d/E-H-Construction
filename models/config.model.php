@@ -35,7 +35,7 @@ if ($local) {
 	$debug = TRUE;
 
 	// Define the constants:
-	define('BASE_URI', 'C:\xampp\htdocs\ehconstruction');
+	define('BASE_URI', 'D:\MAMP\htdocs\E-H-Construction');
 	define('BASE_URL', 'http://ehc.dev');
 	define('DB', 'db.model.php');
 
